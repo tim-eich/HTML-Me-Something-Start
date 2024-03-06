@@ -1,1 +1,100 @@
-/* Write your CSS here! */
+  body {
+    height:450px;
+  }
+  .container {
+    width:340px;
+    margin-top:30px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0;
+    position:relative;
+    
+    -webkit-animation:heartBeat 1s ease 1 0s;
+    -moz-animation:heartBeat 1s ease 1 0s;
+    -o-animation:heartBeat 1s ease 1 0s;
+    -ms-animation:heartBeat 1s ease 10s;
+    animation:heartBeat 1s ease 1 0s;
+  }
+
+  /*
+  .container:hover {
+    -webkit-animation:heartBeat 0.8s ease infinite 0s;
+    -moz-animation:heartBeat 0.8s ease infinite 0s;
+    -o-animation:heartBeat 0.8s ease infinite 0s;
+    -ms-animation:heartBeat 0.8s ease infinite 0s;
+    animation:heartBeat 0.8s ease infinite 0s;
+  }
+  */
+
+  .heart {
+    position:absolute;
+    left:70px;
+    top:90px;
+    width:200px;
+    height:200px;
+    background-color:#bf0b0b;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    transform:rotate(45deg);
+  }
+
+  
+  .heart:before, .heart:after {
+    content:'';
+    display:block;
+    width:200px;
+    height:200px;
+    position:absolute;
+    border-radius:100px;
+    background-color:#bf0b0b;
+  }
+  
+  .heart:before {
+    left:-100px;
+    top:0;
+  }
+  .heart:after {
+    right:0;
+    top:-100px
+  }
+  
+  /*
+  css keyframes based off:
+  https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/
+  */
+  /*tested on chrome 24*/
+  @-webkit-keyframes heartBeat { 
+      0% { zoom:100%; }
+      15% { zoom:120%; }
+      25% { zoom:110%; }
+      35% { zoom:120%; }
+      100% { zoom:100%; }
+  }
+  /*tested on opera 12*/
+  @-o-keyframes heartBeat { 
+      0% { zoom:100%; }
+      15% { zoom:120%; }
+      25% { zoom:110%; }
+      35% { zoom:120%; }
+      100% { zoom:100%; }
+  }
+  /*
+  tested on IE9, should work but doesn't :(
+  https://developer.mozilla.org/en-US/docs/CSS/transform
+  */
+  @-ms-keyframes heartBeat { 
+      0% { transform:scale(1); }
+      15% { transform:scale(1.2); }
+      25% { transform:scale(1.1); }
+      35% { transform:scale(1.2); }
+      100% { transform:scale(1); }
+  }
+  /*tested on FF 18*/
+  @keyframes heartBeat { 
+      0% { transform:scale(1); }
+      15% { transform:scale(1.2); }
+      25% { transform:scale(1.1); }
+      35% { transform:scale(1.2); }
+      100% { transform:scale(1); }
+  }
