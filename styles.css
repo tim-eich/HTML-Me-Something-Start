@@ -1,9 +1,9 @@
 body { 
-	display:flex; 
+	display: flex; 
 	align-items: center; 
 	justify-content: center; 
 	min-height:100vh; 
-	margin: 0; 
+	margin: 8px; 
 	background-color: lightcoral; 
 }
 
@@ -25,7 +25,7 @@ button {
   cursor: pointer;
 }
 
-.ruda-font {
+.funParagraph {
   position: absolute;
   z-index: 1;
   margin-bottom: 80px;
@@ -39,5 +39,9 @@ button {
   color: rgb(0, 255, 213);
   user-select: none;
   pointer-events: none;
+  color: green;
 }
 
+#mainHeading {
+  color: red;
+}

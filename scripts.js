@@ -17,8 +17,8 @@ function init() {
     let currentFact = 0;
     
     function displayHeartFact() {
-        let heartContainer = document.getElementById('heartContainer');
-        heartContainer.innerHTML = heartFacts[currentFact];
+        let testP = document.getElementById('testP');
+        testP.innerHTML = heartFacts[currentFact];
         if (currentFact === heartFacts.length - 1) {
             currentFact = 0;
         } else {
@@ -54,7 +54,7 @@ function init() {
       
       heart.addEventListener("click", () => {
         heart.animate(heartBeating, heartTiming);
-        document.getElementById('heartContainer').animate(
+        document.getElementById('testP').animate(
             [
                 {
                     opacity: 1,
