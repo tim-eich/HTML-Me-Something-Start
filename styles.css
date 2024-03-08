@@ -4,7 +4,8 @@ body {
 	justify-content: center; 
 	min-height:100vh; 
 	margin: 8px; 
-	background-color: lightcoral; 
+	background-color: lightcoral;
+  overflow: hidden; 
 }
 
 button {
@@ -15,7 +16,7 @@ button {
 }
 
 .heart {
-  width: 50%;
+  width: 45%;
   fill: red;
   position: relative;
   margin-top: 30px;
@@ -42,6 +43,24 @@ button {
   color: green;
 }
 
+.footer {
+  width: 100%;
+  height: 20px;
+  border-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color:crimson;
+}
+
+
+
 #mainHeading {
   color: red;
 }
+
+#testP {
+  color: white;
+}
+
