@@ -14,36 +14,30 @@ button {
   box-shadow: none;
 }
 
-#heart {
+.heart {
+  width: 50%;
+  fill: red;
   position: relative;
-  width: 100px;
-  height: 90px;
-  margin-top: 10px;
+  margin-top: 30px;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
 }
 
-#heart::before, #heart::after {
-  content: "";
+.ruda-font {
   position: absolute;
-  top: 0;
-  width: 52px;
-  height: 80px;
-  border-radius: 50px 50px 0 0;
-  background: red;
+  z-index: 1;
+  margin-bottom: 80px;
+  font-size: 1.5em;
+  font-family: "Ruda", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  width: 35%;
+  color: rgb(0, 255, 213);
+  user-select: none;
+  pointer-events: none;
 }
 
-#heart::before {
-  left: 50px;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-}
-
-#heart::after {
-  left: 0;
-  transform: rotate(45deg);
-  transform-origin: 100% 100%;
-}
-
-#heart:active {
-  
-  transform: scale(2);
-}
